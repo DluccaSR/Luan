@@ -1,48 +1,37 @@
 <?php
 include("conn2.php");
 
-$sql = "SELECT * FROM emprestimo";
+$query = "SELECT * FROM emprestimo";
+$result = mysqli_query($conn, $query);
 
-$res = $conn->query($sql);
-
-if ($res && $res->num_rows > 0) {
+if ($result && mysqli_num_rows($result) > 0) {
     $html = "<table border='1'>";
+    $html .= "<thead>";
+    $html .= "<tr>";
+    $html .= "<th>Nome do Produto</th>";
+    $html .= "<th>Quantidade emprestada</th>";
+    $html .= "</tr>";
+    $html .= "</thead>";
+    $html .= "<tbody>";
 
-    $html .= "<td>Nome do Produto</td>";
-    $html .= "<td>Quantidade emprestada</td>";
-    $html .= "<td></td>";
-    $html .= "<td></td>";
-    $html .= "<td></td>";
-    $html .= "<td></td>";
-
-    while ($row = $res->fetch_object()) {
+    while ($row = mysqli_fetch_assoc($result)) {
         $html .= "<tr>";
-        $html .= "<td>" . $row->nome_produto. "</td>";
-        $html .= "<td>" . $row->quantidade_prod . "</td>";
-    //    $html .= "<td>" . $row->. "</td>";
-    //   $html .= "<td>" . $row->. "</td>";
-    //    $html .= "<td>" . $row->. "</td>";
-    //    $html .= "<td>" . $row->. "</td>";
+        $html .= "<td>".$row['nome_prod']."</td>";
+        $html .= "<td>".$row['quantidade_prod']."</td>";
         $html .= "</tr>";
     }
 
+    $html .= "</tbody>";
     $html .= "</table>";
+
+    $dompdf = new Dompdf\Dompdf();
+    $dompdf->loadHtml($html);
+    $dompdf->setPaper('A4', 'portrait');
+    $dompdf->render();
+    $dompdf->stream("relatorio_emprestimo.pdf", array("Attachment" => false));
+    exit();
 } else {
-    $html = "Nada encontrado";
+    echo "<p>Nenhum empréstimo encontrado.</p>";
 }
 
-use Dompdf\Dompdf;
-require_once 'dompdf/autoload.inc.php';
-
-$dompdf = new Dompdf();
-
-$dompdf->loadHtml($html);
-
-$dompdf->set_option('defaultFont', 'sans');
-
-$dompdf->setPaper('A4', 'portrait');
-
-$dompdf->render();
-
-$dompdf->stream();
 ?>
