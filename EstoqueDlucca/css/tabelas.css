@@ -1,0 +1,47 @@
+body {
+    background: rgba(0, 0, 0, 0.5) url('../img/correio.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255);
+    border: 2px solid;
+    margin: 56px auto;
+    border-radius: 20px;
+}
+
+.table {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid;
+    border-radius: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.btn-green {
+    background-color: #02bf1f;
+    color: black;
+    margin-right: 5px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-green:hover {
+    background-color: #02d422;
+}

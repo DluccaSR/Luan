@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(207, 135, 0), rgb(248, 170, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login {
+    background: linear-gradient(to right, rgb(41, 38, 32), rgb(48, 41, 41));
+    border-radius: 10px;
+    width: 400px;
+    padding: 40px;
+}
+
+.login h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+}
+
+.login .box-user {
+    position: relative;
+}
+
+.login .box-user input {
+    width: 100%;
+    padding: 10px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.login .box-user label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login .box-user input:focus ~ label,
+.login .box-user input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.forget {
+    font-size: 12px;
+    color: #5b6b8b;
+    float: right;
+}
+
+.btn-green{
+    background-color: #02bf1f;
+    color: black;
+    margin-right: 5px;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    .btn-green:hover {
+        background-color: #02d422;
+    }
+
+.btn-blue{
+    background-color: #2994ff;
+    color: black;
+    margin-right: 5px;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    float: right;
+    }
+    .btn-blue:hover {
+    background-color: #47a3ff;
+    }
+    .btn-cad{
+        background-color: #2994ff;
+        color: black;
+        margin-right: 5px;
+        padding: 7px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .btn-cad:hover {
+        background-color: #47a3ff;
+    }
+    .btn{
+        padding: 8px 50px;
+        display: block;
+        margin: 0 auto;
+    }

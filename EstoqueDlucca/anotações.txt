@@ -1,0 +1,23 @@
+    Consertar os botões
+
+    Ordenar o css e talz
+
+    PopUps em todas as telas --> to arrumando isso
+
+    Todos os itens (passagem de parametro) para excluir - senha admin --> se vira dlucca
+
+    Permissões para as seções(3 usuários) --> talvez não tenha
+
+    Grafico de produtos (informar produtos abaixo de 10 no estoque) --> se vira nisso tbm (fazer o sistema gerar um gráfico)
+
+    Reconsividade (ou seilá oq)
+
+    Chave id unico
+
+    Cadastrar 30 itens de estoque(reais)
+
+    Utilizar o phpmyadmin --> tá ezz
+
+    Relatórios exportar para pdf --> tabela_registros --> gerar_pdf
+
+    Filtrar os relatórios por filtros --> search
