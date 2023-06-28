@@ -1,0 +1,11 @@
+    Ordenar o css e talz ******************************
+
+    PopUps em todas as telas **********************************
+
+    Todos os itens (passagem de parametro) para excluir - senha admin
+
+    Permissões para as seções(3 usuários)
+
+    Chave id unico
+
+    Relatórios exportar para pdf --> tabela_registros --> gerar_pdf *******************************
